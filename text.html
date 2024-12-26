@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="script.js"></script>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Up and Down</title>
+    <!-- <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+      body {
+        text-align: center;
+        background-color: #eaeaea;
+        margin: 0;
+        height: 2000px; /* Added to make scrolling visible */
+      }
+  
+      a {
+        text-decoration: none;
+        font-family: Helvetica;
+        font-weight: bold;
+        color: #222;
+        border: 1px solid #ccc9c9;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 3px;
+        box-shadow: 0px 1px 0px #e8e7e7;
+        font-size: 15px;
+        cursor: pointer;
+        display: inline-block;
+        margin: 20px;
+      }
+  
+      a:hover {
+        background-color: #eaeaea;
+      }
+  
+      a:active {
+        box-shadow: inset -0px 4px 2px -3px #ccc9c9;
+      }
+  
+      h1 {
+        color: #111;
+        font-family: 'Open Sans Condensed', sans-serif;
+      }
+    </style> -->
+    <style>
+    .overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(240, 89, 7, 0.82);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+   }
+
+      .bottom-overlay {
+    top: 100%;
+     }
+
+     .item:hover .bottom-overlay {
+       top: 0;
+       }
+
+     .text {
+     color: white;
+    font-size: 1.2vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+   } 
+    </style>
+  </head>
+  <body>
+    <!-- <a class="down" href="#">Scroll down &darr;</a>
+    <h1>You're awesome!</h1>
+    <a class="up" href="#">Scroll up &uarr;</a>
+   -->
+    <!-- <script>
+      
+      document.querySelector('.down').addEventListener('click', function (event) {
+        event.preventDefault();
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      });
+  
+      // Scroll up
+      document.querySelector('.up').addEventListener('click', function (event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script> -->
+
+
+    <div class="item animated wow fadeIn">
+      <img src="https://i.ibb.co/m5yGbdR/blog2.jpg" alt="img" height="auto" width="100%">
+
+    <div class="overlay bottom-overlay">
+      <div class="text">Bottom Overlay</div>
+    </div>
+    </div>
+  </body>
+  </html>
+  

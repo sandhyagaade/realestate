@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+       <style>
+         *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            line-height: normal;
+            overflow-x: hidden;
+        }
+        .navigation{
+          justify-content: space-between;
+          margin-left: auto; 
+          margin-right: 0px;
+         
+           background-color: rgb(38, 63, 132);
+           padding: 8px 10px;
+            display: flex; gap: 30px;
+        }
+        
+
+   .home1{
+    float: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+  
+   }
+    .home text h3{
+       font-size: 15px;
+    }
+    .home2 h6{
+      align-items: right;
+     padding: 8px 10px;
+     border-radius: 20px;
+     border: 1px solid black;
+     color: black;
+      
+    }
+
+    .home2  h6:hover{
+      background-color: rgb(130, 126, 145);
+      color: white;
+      cursor: pointer;
+    }
+
+  .text-card {
+    
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 330px;
+  margin: auto;
+  text-align: left;
+  font-family: arial;
+  border-radius: 8px;
+}
+
+.image-holder{
+  border-radius: 4px;
+}
+ .textcard1 p{
+    color: gray;
+ }
+
+ .home::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+   </style>
+
+
+<style>
+  .menu{
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+ 
+ .text {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  color: white;
+  padding-left: 10px;
+  padding-right: 0px;
+ 
+}
+.text-block img{
+  border-radius: 50%;
+}
+/* .image-text h4{
+  position: absolute;
+  top: 50%;
+  bottom: 10%;
+  font-weight: 600;
+  font-size: 35px;
+  
+  color: black;
+  padding-left: 10%;
+  padding-right: 60%;
+} */
+     
+   /* .text-card img:hover{
+     background-color: rgb(24, 24, 241);
+     opacity: 0.6;
+   } */
+
+
+  .text-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .text-card::after {
+    content: "";
+    clear: both;
+    display: table;
+   }
+
+  .scroll a {
+  
+  text-align: left;
+  padding: 10px;
+  background-color: #f9f9f9;
+  /* background-color: #eaeaea; */
+  /* text-decoration: none; */
+  /* color: #222; */
+  /* transform: rotate(45deg); */  
+  /* border-radius: 3px; */
+  /* box-shadow: 0px 1px 0px #e8e7e7; */
+  /* font-size: 15px; */
+  /* cursor: default; */
+}
+
+    /* .scroll a:hover {
+  background-color: #eaeaea;
+}
+
+    .scroll a:active {
+  box-shadow: inset -0px 4px 2px -3px #ccc9c9;
+} */
+
+     /* .scroll h1 {
+  color: #111;
+  line-height: 620px;
+} */
+
+
+.arrow {
+  border: solid black;
+  font-size: 20px;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.up {
+ 
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+</style>
+
+<style>
+
+      .navigation ul li {
+        position: relative;
+      }
+    
+      .navigation ul li a:hover {
+      
+        color: #fff; 
+        border-radius: 5px; 
+      }
+    
+      .navigation ul li a::before {
+        content: "";
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        width: 0%;
+        height: 2px;
+
+        background-color: #fff;
+        transition: width 0.3s ease, left 0.3s ease;
+      }
+    
+      .navigation ul li a:hover::before {
+        width: 100%;
+        left: 0;
+      }
+    
+</style>
+
+
+</head>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">       
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+   
+
+       <!-- <div class="header" >
+          <div class="logo" style="margin-left: 20px;">
+             <img src="image/logo1.jpg" alt="image" height="30px" width="60px" >
+          </div>
+
+           <div class="navigation">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">bill</a></li>
+                    <li><a href="">Money</a></li>
+                    <li><a href="">contact Us</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+           </div>
+       </div>
+
+        <img src="./image/home2.avif" alt="" width="100%" height="auto">
+ -->
+
+ 
+
+ <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color:rgb(38, 63, 132);;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon8" ><i class="fa-solid fa-bars" style="color: #fff;"></i></span>
+  </button>
+
+  <div class="logo" style="margin-left: 20px;">
+    <img src="image/gradient-real-estate-logo-design_23-2151257071.avif" alt="image" height="50px" width="70px" >
+ </div>
+
+ 
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+   
+      <body data-spy="scroll" data-target=".navbar" data-offset="50">
+      <div class="navigation">
+      <ul class="navbar-nav"style="list-style: none; margin: 0; padding: 0; display: flex; gap: 20px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          
+        <li><a href="Home.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">Home</a></li>
+        <li><a href="About Us.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">About Us</a></li>
+        <li><a href="Property.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">Property</a></li>
+        <li><a href="Contact.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">Contact Us</a></li>
+      
+        <!-- <li><a href="#" style="text-decoration: none; color: #000; font-size: 16px;color: white;">News</a></li> -->
+     
+      </ul>
+    </div>
+  </div>
+
+
+</nav>
+
+
+   
+ <!-- <div class="navigation  fixed-top">
+
+  <div class="logo" style="margin-left: 20px;">
+    <img src="image/gradient-real-estate-logo-design_23-2151257071.avif" alt="image" height="50px" width="70px" >
+ </div>
+
+ 
+
+  <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 20px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+      <li><a href="Home.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">Home</a></li>
+      <li><a href="About Us.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">About Us</a></li>
+      <li><a href="Contact.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">Contact Us</a></li>
+      <li><a href="Property.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">Property</a></li>
+      <li><a href="#" style="text-decoration: none; color: #000; font-size: 16px;color: white;">News</a></li>
+  </ul>
+</div>
+  -->
+<!-- </div> -->
+
+  <div class="images1">
+    <img src="/image/luxury-residential-house1.avif" alt="Home Image" style="width: 100%; height: auto; display: block;">
+     <div class="image-text">
+        <!-- <h4>Find a Place 
+          Where you can 
+          be yourself. </h4> -->
+          <!-- <p>If you're looking for a place where you can be yourself.
+            dont give up keep searching until you find a place that 
+            feel like them.
+          </p> -->
+       
+        
+     </div>
+  </div>
+
+
+
+        <section>
+             <div class="home" style="background-color: hwb(0 100% 0%);">
+                <div class="container">
+                     <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12">
+                                 <div class="home1"  style="display: flex;  gap: 30px; margin-top: 40px; margin-bottom: 40px;">
+                                  <div class="home-text"  style="margin-left: 20px;">
+                                    <h3>Best Home in Your City</h3>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At dignissimos,<br>
+                                     quas quae architecto obcaecati consectetur animi distinctio quibusdam iure.
+                                    
+                                  </div>
+                                 
+                                   <div class="home2">
+                                    <h6>Explore more
+                                   <img src="/image/right-up.png" alt="image"></h6>
+                                   </div>
+                                 </div>
+                              </div>
+                  
+                                <div class="col-lg-3 col-md-3 col-sm-12"  style="padding: 40px 20px;" >
+                                   <div class="text-card">
+                                    <img src="./image/modern-house-garden_251764-379.avif" alt="img" width="100%" height="100%">
+
+                                      <div class="textcard1" style="margin-left: 8px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                          <h4>$710.68</h4> 
+                                          <h5>Cova Home Reality</h5>                             
+                                         <p>1901 Thornridge cie <br>
+                                          Hawali <br> 81063</p>
+                                          <hr>
+                                      </div>
+                                      
+                                      <div class="icons" style="display: flex; gap: 10px; padding: 5px;">
+                                          <div class="icon-text" style=" margin-left: 8px;">
+                                            <i class="fa-solid fa-bed"></i>
+                                            3 Bed
+                                          </div>
+
+                                          <div class="icon-text">
+                                            <i class="fa-solid fa-bath"></i>
+                                            2 bath
+                                          </div>
+                                      </div>
+
+                                   </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-12" style="padding: 40px 20px;">
+                                   <div class="text-card">
+                                   <img src="./image/home2.avif" alt="img" width="100%" height="100%">
+
+                                  <div class="textcard1" style="margin-left: 8px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                          <h4>$.68</h4> 
+                                          <h5>Exit Realty</h5>                             
+                                         <p>2971 Westheimer <br>Rd.Santa Ana, <br>
+                                            illnois 85486</p>
+                                          <hr>
+                                      </div>
+
+                                      <div class="icons" style="display: flex; gap: 10px; padding: 5px;">
+                                          <div class="icon-text" style=" margin-left: 8px;">
+                                            <i class="fa-solid fa-bed"></i>
+                                            3 Bed
+                                          </div>
+
+                                          <div class="icon-text">
+                                            <i class="fa-solid fa-bath"></i>
+                                            2 bath
+                                          </div>
+                                      </div>
+
+                                   </div>
+                                  </div> 
+                              
+
+
+                               <div class="col-lg-3 col-md-3 col-sm-12" style="padding: 40px 20px;">
+                                <div class="text-card">
+                                 <img src="./image/photorealistic-woode1.avif" alt="img" width="100%" height="100%">
+                                 <div class="textcard1" style="margin-left: 8px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                  <h4>$630.44</h4> 
+                                  <h5>The Real Estate Group</h5>                             
+                                 <p>2158 Thornridge cir <br>
+                                  Connectioncut <br>  35624</p>
+                                  <hr>
+                              </div>
+
+                              <div class="icons" style="display: flex; gap: 10px; padding: 5px;">
+                                  <div class="icon-text" style=" margin-left: 8px;">
+                                    <i class="fa-solid fa-bed"></i>
+                                    3 Bed
+                                  </div>
+
+                                  <div class="icon-text">
+                                    <i class="fa-solid fa-bath"></i>
+                                    2 bath
+                                  </div>
+                              </div>
+
+                                </div>
+                             </div>
+
+
+                             <div class="col-lg-3 col-md-3 col-sm-12" style="padding: 40px 20px;">
+                              <div class="text-card">
+                               <img src="./image/photorealistic3.avif" alt="img" width="100%" height="100%">
+                               <div class="textcard1" style="margin-left: 8px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                <h4>$475.22</h4> 
+                                <h5>757 Realty</h5>                             
+                               <p>4140 Paries Rd.Allentown,New <br>
+                                Mexico <br> 31134</p>
+                                <hr>
+                            </div>
+
+                            <div class="icons" style="display: flex; gap: 10px;  padding: 5px;">
+                                <div class="icon-text" style=" margin-left: 8px;">
+                                  <i class="fa-solid fa-bed"></i>
+                                  3 Bed
+                                </div>
+
+                                <div class="icon-text">
+                                  <i class="fa-solid fa-bath"></i>
+                                  2 bath
+                                </div>
+                            </div>
+
+                              </div>
+                           </div>
+
+                          
+
+                           
+
+                            
+
+                             <!-- end -->
+                            
+                                
+
+                                  <div class="col-lg-3 col-md-3 col-sm-12" style="padding: 40px 20px;">
+                                    <div class="text-card" >
+                                     <img src="./image/home1.jpg" alt="img" width="100%" height="100%">
+ 
+                                     <div class="textcard1" style="margin-left: 8px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                      <h4>$473.85</h4> 
+                                      <h5>Beach Pros Realty Inc</h5>                             
+                                     <p>2715 Ash Dr.San Jose <br> Dakota <br>
+                                       83475</p>
+                                      <hr>
+                                  </div>
+
+                                  <div class="icons" style="display: flex; gap: 10px; padding: 5px;">
+                                      <div class="icon-text" style=" margin-left: 8px;">
+                                        <i class="fa-solid fa-bed"></i>
+                                        3 Bed
+                                      </div>
+
+                                      <div class="icon-text">
+                                        <i class="fa-solid fa-bath"></i>
+                                        8 bath
+                                      </div>
+                                  </div>
+
+                                    </div>
+                                 </div>
+ 
+                                 <div class="col-lg-3 col-md-3 col-sm-12" style="padding: 40px 20px;">
+                                   <div class="text-card">
+                                    <img src="./image/photorealistic-woode1.avif" alt="img" width="100%" height="100%">
+ 
+                                    <div class="textcard1" style="margin-left: 8px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                      <h4>$105.55</h4> 
+                                      <h5>Real Estate</h5>                             
+                                     <p>3587 Keller Williams  <br>
+                                      CentW <br> 57067</p>
+                                      <hr>
+                                  </div>
+
+                                  <div class="icons" style="display: flex; gap: 10px; padding: 5px;">
+                                      <div class="icon-text" style=" margin-left: 8px;">
+                                        <i class="fa-solid fa-bed"></i>
+                                        6 Bed
+                                      </div>
+
+                                      <div class="icon-text">
+                                        <i class="fa-solid fa-bath"></i>
+                                        8 bath
+                                      </div>
+                                  </div>
+ 
+                                    </div>
+                                   </div>
+                               
+ 
+ 
+                                <div class="col-lg-3 col-md-3 col-sm-12" style="padding: 40px 20px;">
+                                 <div class="text-card">
+                                  <img src="./image/real-estate-image.jpg" alt="img" width="100%" height="100%">
+                                  
+                                  <div class="textcard1" style="margin-left: 8px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                    <h4>$739.65</h4> 
+                                    <h5>All Pros Real Estate</h5>                             
+                                   <p>6502 Preston Rd. <br>inglewood,Mane<br>
+                                       96300</p>
+                                    <hr>
+                                </div>
+
+                                <div class="icons" style="display: flex; gap: 10px; padding: 5px;">
+                                    <div class="icon-text" style=" margin-left: 8px;">
+                                      <i class="fa-solid fa-bed"></i>
+                                      3 Bed
+                                    </div>
+
+                                    <div class="icon-text">
+                                      <i class="fa-solid fa-bath"></i>
+                                      2 bath
+                                    </div>
+                                </div>
+ 
+                                 </div>
+                                 </div>
+
+
+
+                                 <div class="col-lg-3 col-md-3 col-sm-12" style="padding: 40px 20px;">
+                                  <div class="text-card">
+                                   <img src="./image/home2.avif" alt="img" width="100%" height="100%">
+                                   
+                                   <div class="textcard1" style="margin-left: 8px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                     <h4>$948.55</h4> 
+                                     <h5>FIT  Realty</h5>                             
+                                    <p>4517  Washington  <br>Ave Manchester <br>
+                                        Kentucky 39495</p>
+                                     <hr>
+                                 </div>
+ 
+                                 <div class="icons" style="display: flex; gap: 10px; padding: 5px;">
+                                     <div class="icon-text" style=" margin-left: 8px;">
+                                       <i class="fa-solid fa-bed"></i>
+                                       3 Bed
+                                     </div>
+ 
+                                     <div class="icon-text">
+                                       <i class="fa-solid fa-bath"></i>
+                                       2 bath
+                                     </div>
+                                 </div>
+  
+                                  </div>
+                                  </div>
+                              
+                             
+
+                             <!-- end -->
+                              </div>
+                           
+                          
+                     
+                </div>
+             </div>
+        </section>
+
+
+         <div class="scroll" style="margin-left: 30px;">
+          <a class="down" href="#"><i class="arrow down"></i></a>
+         </div>
+
+           <section>
+               <div class="center mt-5">
+                   <div class="container">
+                       <div class="row">
+                          <div class="col-lg-6  col-md-6 col-sm-12">
+                            <div class="image-holder">
+                              <img src="./image/real-estate-image.jpg" alt="img" width="100%" height="auto">
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6  col-md-6 col-sm-12">
+                             <div class="center-right"  style="margin-left: 50px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                <h4 style="font-weight: 600;">We Specialize In <br>
+                                Quality Home <br>
+                                Renovation</h4>
+
+                                <p>Looking to renovate your home reflect your style and <br>
+                                personality? Look no further than our Learn our team of expert who <br>
+                              specialize in quality home renovation to transform your space<br>
+                             into a dream home you'll love.From design to execute.</p>
+                             </div>
+
+                               <div class="center-right1" style="margin-left: 50px;">
+                                   <div class="center-right2" style="display: flex; gap: 100px;">
+                                    <div class="right2">
+                                      <i class="fa-regular fa-square-check"></i>
+                                      <span>smart Home</span>  
+                                    </div>
+  
+                                    <div class="right2">
+                                      <i class="fa-regular fa-square-check"></i>  
+                                      <span>Beautiful Scence Around</span>
+                                    </div>
+                                   </div>
+
+                                     <div class="center-right3" style="display: flex;  gap: 50px;">
+                                      <div class="right2">
+                                        <i class="fa-regular fa-square-check"></i> 
+                                        <span>Exceptional lifestyle</span> 
+                                      </div>
+    
+                                      <div class="right2">
+                                        <i class="fa-regular fa-square-check"></i> 
+                                        <span>Complete 24/7 Security</span> 
+                                      </div>
+                                     </div>
+                               </div>
+                        </div>
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+
+     <section>
+             <div class="center-left  mt-4">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-lg-6 col-md-6 col-sm-12">
+                          <div class="center-right1  mt-4" style="margin-left: 50px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                            <h4 style="font-weight: 600;">We Are Expert In<br>
+                              Historic Home <br>
+                              Renovation</h4>
+
+
+
+
+
+                              <p>Looking to renovate your home reflect your style and <br>
+                                personality? Look no further than our Learn our team of expert who <br>
+                              specialize in quality home renovation to transform your space<br>
+                             into a dream home you'll love.From design to execute.</p>
+                             </div>
+
+                               <div class="center-right1" style="margin-left: 50px;">
+                                   <div class="center-right2" style="display: flex; gap: 100px;">
+                                    <div class="right2">
+                                      <i class="fa-regular fa-square-check"></i>
+                                      <span>smart Home</span>  
+                                    </div>
+  
+                                    <div class="right2">
+                                      <i class="fa-regular fa-square-check"></i>  
+                                      <span>Beautiful Scence Around</span>
+                                    </div>
+                                   </div>
+
+                                     <div class="center-right3" style="display: flex;  gap: 50px;">
+                                      <div class="right2">
+                                        <i class="fa-regular fa-square-check"></i> 
+                                        <span>Exceptional lifestyle</span> 
+                                      </div>
+    
+                                      <div class="right2">
+                                        <i class="fa-regular fa-square-check"></i> 
+                                        <span>Complete 24/7 Security</span> 
+                                      </div>
+                                     </div>
+                          </div>
+                       </div>
+
+                         <div class="col-lg-6  col-md-6 col-sm-12">
+                              <div class="center-right2  mt-4" style="border-radius: 4px;">
+                                  <img src="/image/residential-house1.jpg" alt="image" width="100%" height="auto">
+                              </div>
+                         </div>
+                   </div>
+               </div>
+             </div>
+     </section>
+
+
+
+    <section  class="left mt-3">
+         <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+               <div class="home1"  style="display: flex;  gap: 70px; margin-top: 40px; margin-bottom: 40px;">
+                <div class="home-text"  style="margin-left: 20px;">
+                  <h3>We Help 1000+ Family Find <br>
+                      Their True Home
+                  </h3>   
+                </div>
+               
+                 <div class="home2">
+                  <h6>Explore more
+                 <img src="/image/right-up.png" alt="image"></h6>
+                 </div>
+               </div>
+            </div>
+          </div>  
+
+          <div class="row">
+            <!-- First Column -->
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="text" style="position: relative;">
+                    <img src="./image/happy-family-sitting-floor_23-2148456301.avif" alt="Happy family" style="width: 100%; height: auto;">
+                    <div class="text-block" style="position: absolute; bottom: 0; left: 0; display: flex; align-items:left;gap: 190px;">
+                        <img src="./image/young-man-with-black-puffer-jacket-smiling-with-his-hand-jacket_1200994-10864.jpg" alt="Young man smiling" style="width: 60px; height: 50px; margin-left: auto;">
+                        <div class="stars" style="display: flex; margin-left: 10px;">
+                            <span style="font-size: 15px; color: gold; margin-right: 2px;">&#9733;</span>
+                            <span style="font-size: 15px; color: gold; margin-right: 2px;">&#9733;</span>
+                            <span style="font-size: 15px; color: gold; margin-right: 2px;">&#9733;</span>
+                            <span style="font-size: 15px; color: gold; margin-right: 2px;">&#9733;</span>
+                            <span style="font-size: 15px; color: gold;">&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Second Column -->
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="text" style="position: relative;">
+                    <img src="./image/traditional-family-with-child-are-enjoying-new-home-sitting-sofa-holding-roof-mortgage-insurance-protection-buying-moving-into-your-own-home-green-house-with-potted-plant_292419-6601.avif" alt="Family in a new home" style="width: 100%; height: auto;">
+                    <div class="text-block" style="position: absolute; bottom: 0; left: 0; display: flex; align-items: left; gap: 190px;">
+                        <!-- <ul class="wrapper reviews-grid" style="margin: 0; padding: 0; list-style: none; margin-left: auto;"> -->
+                            <!-- <li class="review-card"> -->
+                                <!-- <span class="rating-value" data-rating="4"></span> -->
+                                <img src="./image/group-young-teenage-girls-together-nature_21730-5446.jpg" alt="Group of girls" style="width: 60px; height: 50px;">
+                            </li>
+                        <!-- </ul> -->
+                        <div class="stars" style="display: flex; margin-left: 10px;">
+                            <span style="font-size: 15px; color: gold; margin-right: 2px;">&#9733;</span>
+                            <span style="font-size: 15px; color: gold; margin-right: 2px;">&#9733;</span>
+                            <span style="font-size: 15px; color: gold; margin-right: 2px;">&#9733;</span>
+                            <span style="font-size: 15px; color: gold; margin-right: 2px;">&#9733;</span>
+                            <span style="font-size: 15px; color: gold;">&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Third Column -->
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="text" style="position: relative;">
+                    <img src="./image/medium-shot-happy-family-kitchen_23-2148321747.avif" alt="Family in the kitchen" style="width: 100%; height: auto;">
+                    <div class="text-block" style="position: absolute; bottom: 0; left: 0; display: flex; align-items: left; gap: 190px;">
+                        <img src="./image/teenage-girl-with-wavy-hairstyle-posing_344912-2772.avif" alt="Teenage girl posing" style="width: 60px; height: 50px; margin-left: auto;">
+                        <div class="stars" style="display: flex; margin-left: 10px;">
+                            <span style="font-size: 16px; color: gold; margin-right: 2px;">&#9733;</span>
+                            <span style="font-size: 15px; color: gold; margin-right: 2px;">&#9733;</span>
+                            <span style="font-size: 15px; color: gold; margin-right: 2px;">&#9733;</span>
+                            <span style="font-size: 15px; color: gold; margin-right: 2px;">&#9733;</span>
+                            <span style="font-size: 15px; color: gold;">&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         
+         </div>
+    </section>
+
+
+
+   <div class="scroll"  style="margin-left: 30px;">
+    <a class="up" href="#"><i class="arrow up"></i></a>
+   </div>
+
+    <!-- <section> -->
+      <div class="footer  mt-3" style="background-color: rgb(38, 63, 132); padding: 40px; ">
+          <div class="container">
+              <div class="row">
+                 
+                  <div class="col-lg-3 col-md-3 col-sm-12">
+                      <div class="footer1">
+                        
+                           <p style="font-size: 30px; font-weight: 400; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">Weather</p> 
+                              <p style="color: white;">Lorem ipsum dolor sit amet,<br> 
+                                Possimus architecto illument  <br> 
+                                similique modi beatae vol .
+                           </p>
+                      </div>
+                  </div>
+  
+                 
+                  <div class="col-lg-3 col-md-3 col-sm-12">
+                      <div class="footer1">
+                           
+                           <p style="font-size: 30px;font-weight: 400; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">Quick links</p>
+                          <ul style="list-style: none; padding: 0; margin: 0;">
+                              <li style="margin-bottom: 5px;  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                  <a href="#"  style=" text-decoration: none; color:white" >Home</a>
+                              </li>
+                              <li style="margin-bottom: 5px;">
+                                  <a href="#" style=" text-decoration: none; color: white;">Buy</a>
+                              </li>
+                              <li style="margin-bottom: 5px;">
+                                  <a href="#" style="text-decoration: none; color: white;">Sell</a>
+                              </li>
+                              <li>
+                                  <a href="#" style=" text-decoration: none; color: white;">Rent</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+  
+                  <!-- Support -->
+                  <div class="col-lg-3 col-md-3 col-sm-12">
+                      <div class="footer1">
+                         <p style="font-size: 30px; font-weight: 400; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">Support</p>
+                          <ul style="list-style: none; padding: 0; margin: 0; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                              <li style="margin-bottom: 5px;">
+                                  <a href="#" style="display: inline-block; text-decoration: none; color: white;">About Us</a>
+                              </li>
+                              <li style="margin-bottom: 5px;">
+                                  <a href="#" style="display: inline-block; text-decoration: none; color: white;">Contact Us</a>
+                              </li>
+                              <li style="margin-bottom: 5px;">
+                                  <a href="#" style="display: inline-block; text-decoration: none; color: white;">Privacy Policy</a>
+                              </li>
+                              <li>
+                                  <a href="#" style="display: inline-block; text-decoration: none; color: white;">Terms & Conditions</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+  
+                  <!-- Get in Touch -->
+                  <div class="col-lg-3 col-md-3 col-sm-12">
+                      <div class="footer1">
+                          <p style="font-size: 30px;font-weight: 400; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">Get in Touch</p>
+
+                          <p style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">
+                              4140 Parker Street<br>
+                              Allentown, New Microsoft 3114
+                          </p>
+                          <div>
+                              <a href="#" style="margin-right: 10px; color: white;"><i class="fa-brands fa-instagram"></i></a>
+                              <a href="#" style="margin-right: 10px; color: white;"><i class="fa-brands fa-facebook"></i></a>
+                              <a href="#" style="color:white;"><i class="fa-brands fa-whatsapp"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </section>
+   
+  
+  <script>
+    // Scroll down
+    document.querySelector('.down').addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+
+    // Scroll up
+    document.querySelector('.up').addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  
+</body>
+</html>   

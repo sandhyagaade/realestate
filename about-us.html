@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-Column Timeline Infographic</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    .timeline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 80%;
+      margin: 50px auto;
+    }
+    .timeline .entry {
+      flex: 0 0 calc(50% - 20px); /* Two columns (50% width each) */
+      box-sizing: border-box;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s;
+    }
+    .timeline .entry:hover {
+      background: #e6f7ff;
+    }
+    .timeline .entry i {
+      font-size: 24px;
+      color: #007bff;
+      margin-right: 15px;
+    }
+    .timeline .entry h3 {
+      font-size: 18px;
+      margin: 0;
+      display: inline;
+    }
+    .timeline .entry p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .timeline .entry {
+        flex: 0 0 100%; /* Stack vertically on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline">
+    <div class="entry">
+      <i class="fas fa-home"></i>
+      <h3>Residential</h3>
+      <p>Helping first-time buyers and seasoned homeowners find their dream homes.</p>
+    </div>
+    <div class="entry">
+      <i class="fas fa-building"></i>
+      <h3>Commercial</h3>
+      <p>Solutions for businesses seeking the perfect space for growth.</p>
+    </div>
+    <div class="entry">
+      <i class="fas fa-chart-line"></i>
+      <h3>Investment</h3>
+      <p>Lucrative real estate opportunities for diverse portfolios.</p>
+    </div>
+    <div class="entry">
+      <i class="fas fa-tools"></i>
+      <h3>Management</h3>
+      <p>Stress-free tenant placement and maintenance solutions.</p>
+    </div>
+  </div>
+</body>
+</html>

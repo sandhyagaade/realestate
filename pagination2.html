@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+          
+   
+
+    <style>
+    
+    
+         * {
+            /* padding: 0; */
+            margin: 0;
+            /* overflow-x: hidden; */
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+        /* Full width navigation bar */
+        .navigation{
+          justify-content: space-between;
+          margin-left: auto; 
+          margin-right: 0px;
+            line-height: normal;
+           background-color: rgb(38, 63, 132);
+           padding: 8px 10px;      
+            display: flex; gap: 30px;
+        }
+    </style>
+
+
+<style>
+    
+.pagination {
+  display: inline-block;
+  gap: 10px;
+  text-decoration: none;
+ 
+}
+
+.pagination a {
+  color: black;
+ 
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid black;
+  gap: 40px;
+  
+  border-radius: 50%;
+}
+
+.pagination a.active {
+  background-color: rgb(38, 63, 132);
+  text-decoration: none;
+  color: white;
+}
+
+.pagination a:hover:not(.active)
+ {
+  background-color: #ddd;
+  text-decoration: none;
+}
+
+
+  .side{
+    display: flex;
+    justify-content: space-between;
+     gap: 30px;
+  }
+
+     
+  .text-card {
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 330px;
+    margin: auto;
+    text-align: left;
+    font-family: arial;
+    border-radius: 8px;
+    
+  }
+  
+  .image-holder{
+    border-radius: 4px;
+  }
+   .textcard1 p{
+      color: gray;
+   }
+  
+   .home::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  
+</style>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+    
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color:rgb(38, 63, 132);;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="logo" style="margin-left: 20px;">
+      <img src="image/gradient-real-estate-logo-design_23-2151257071.avif" alt="image" height="50px" width="70px" >
+   </div>
+  
+   
+  
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+     
+        <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <ul class="navbar-nav"style="list-style: none; margin: 0; padding: 0; display: flex; gap: 20px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            
+          <li><a href="index.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">Home</a></li>
+          <li><a href="About Us.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">About Us</a></li>
+          <li><a href="Contact.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">Contact Us</a></li>
+          <li><a href="Property.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">Property</a></li>
+          <li><a href="#" style="text-decoration: none; color: #000; font-size: 16px;color: white;">News</a></li>
+       
+        </ul>
+    </div>
+  
+  
+  </nav>
+  
+  
+   
+        
+             <div class="text-image">
+              <img src="./image/about image1.jpg" alt="image" width="100%" height="auto">
+             </div>
+
+
+
+
+
+
+        <div class="pagination1.html">
+      <div class="container">
+         <div class="row  mt-4"  >
+             <div class="col-lg-8  col-md-8 col-sm-12">
+                <div class="rightside">
+                      
+            
+                       <div class="row">
+
+                        
+                        <div class="col-lg-6  col-md-6">
+                          <div class="text-card">
+                            <img src="./image/modern-house-garden_251764-379.avif" alt="img" width="100%" height="100%">
+
+                              <div class="textcard1" style="margin-left: 8px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                  <h4>$710.68</h4> 
+                                  <h5>Cova Home Reality</h5>                             
+                                 <p>1901 Thornridge cie <br>
+                                  Hawali <br> 81063</p>
+                                  <hr>
+                              </div>
+                              
+                              <div class="icons" style="display: flex; gap: 10px; padding: 5px;">
+                                  <div class="icon-text" style=" margin-left: 8px;">
+                                    <i class="fa-solid fa-bed"></i>
+                                    3 Bed
+                                  </div>
+
+                                  <div class="icon-text">
+                                    <i class="fa-solid fa-bath"></i>
+                                    2 bath
+                                  </div>
+                              </div>
+
+                           </div>
+                         </div>
+  
+                         <div class="col-lg-6   col-md-6">
+                          <div class="text-card">
+                            <img src="./image/photorealistic-woode1.avif" alt="img" width="100%" height="100%">
+
+                              <div class="textcard1" style="margin-left: 8px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                  <h4>$710.68</h4> 
+                                  <h5>Cova Home Reality</h5>                             
+                                 <p>1901 Thornridge cie <br>
+                                  Hawali <br> 81063</p>
+                                  <hr>
+                              </div>
+                              
+                              <div class="icons" style="display: flex; gap: 10px; padding: 5px;">
+                                  <div class="icon-text" style=" margin-left: 8px;">
+                                    <i class="fa-solid fa-bed"></i>
+                                    3 Bed
+                                  </div>
+
+                                  <div class="icon-text">
+                                    <i class="fa-solid fa-bath"></i>
+                                    2 bath
+                                  </div>
+                              </div>
+
+                           </div>
+                         </div>
+  
+                        
+                       </div>
+                       
+                       
+                </div>
+                <div class="row">
+                  <div class="col-lg-6   col-md-6">
+                    <div class="text-card   mt-4">
+                      <img src="./image/photorealistic3.avif" alt="img" width="100%" height="100%">
+
+                        <div class="textcard1" style="margin-left: 8px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                            <h4>$710.68</h4> 
+                            <h5>Cova Home Reality</h5>                             
+                           <p>1901 Thornridge cie <br>
+                            Hawali <br> 81063</p>
+                            <hr>
+                        </div>
+                        
+                        <div class="icons" style="display: flex; gap: 10px; padding: 5px;">
+                            <div class="icon-text" style=" margin-left: 8px;">
+                              <i class="fa-solid fa-bed"></i>
+                              3 Bed
+                            </div>
+
+                            <div class="icon-text">
+                              <i class="fa-solid fa-bath"></i>
+                              2 bath
+                            </div>
+                        </div>
+
+                     </div>
+                   </div>
+
+
+
+
+
+                   <div class="col-lg-6   col-md-6">
+                    <div class="text-card mt-4">
+                      <img src="./image/real-estate-image.jpg" alt="img" width="100%" height="100%">
+
+                        <div class="textcard1" style="margin-left: 8px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                            <h4>$710.68</h4> 
+                            <h5>Cova Home Reality</h5>                             
+                           <p>1901 Thornridge cie <br>
+                            Hawali <br> 81063</p>
+                            <hr>
+                        </div>
+                        
+                        <div class="icons" style="display: flex; gap: 10px; padding: 5px;">
+                            <div class="icon-text" style=" margin-left: 8px;">
+                              <i class="fa-solid fa-bed"></i>
+                              3 Bed
+                            </div>
+
+                            <div class="icon-text">
+                              <i class="fa-solid fa-bath"></i>
+                              2 bath
+                            </div>
+                        </div>
+
+                     </div>
+                   </div>
+
+
+                   <section>     
+                    <div class="pagination" style="margin-left: 20PX; margin-top: 30px;">
+                    <a href="#">&laquo;</a>
+                    <a href="pagination1.html">1</a>
+                    <a class="active" href="pagination2.html">2</a>
+                    <a href="pagination3.html">3</a>
+                    <a href="pagination4.html">4</a>
+                    <a href="pagination5.html">5</a>  
+                    <a href="#">&raquo;</a>
+                  </div>
+                 </section>
+            
+
+
+                </div>
+
+
+             </div>
+
+          
+
+
+
+             
+
+             <div class="col-lg-4  col-md-4 col-sm-12 " style="border: 1px solid gray; ">
+              <div
+              class="flex">
+            
+              <!-- type filter -->
+              <div
+                class="pb-35px mb-35px  border-opacity-25 mt-5"
+              >
+                <h5 class="mb-25px text-lg text-heading-color font-semibold">
+                  <span class="leading-1.3">Property Type</span>
+                </h5>
+                <ul class="flex flex-col gap-y-15px">
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="house-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer">
+                      <input type="checkbox"  id="house-type"
+                        class="hidden " checked >
+                      <span
+                           class="checkmark w-4 h-4  inline-block leading-1 " 
+                      ></span>
+                      House
+                    </label> 
+                    <span   style="float: right;" class="leading-1.8">3,924 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                  <!-- 1st end -->
+                    <label
+                      for="sigle-family-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="sigle-family-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark w-4 h-4 bg-white   inline-block leading-1"
+                      ></span>
+                      Single Family
+                    </label>
+                    <span style="float: right;" class="leading-1.8">3,610 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="apartment-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer">
+                      <input type="checkbox" id="apartment-type"
+                        class="hidden">
+                      <span
+                        class="checkmark w-4 h-4 bg-white group-hover:bg-secondary-color  transition-all duration-300 relative z-0 after:absolute after:left-1 after:top-0 after:w-[5px] after:h-10px after:rotate-[45deg] after:border after:border-t-0 after:opacity-0 after:border-l-0 after:border-white mr-15px inline-block leading-1"
+                      ></span>
+                      Apartment
+                    </label>
+                    <span  style="float: right;" class="leading-1.8">2,912 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="office-villa-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="office-villa-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark w-4 h-4 bg-white   inline-block leading-1"
+                      ></span>
+                      Office Villa
+                    </label>
+                    <span    style="float: right;"class="leading-1.8">2,687 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="luxary-home-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="luxary-home-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark w-4 h-4 bg-white group-hover:bg-secondary-color  transition-all duration-300 relative z-0 after:absolute after:left-1 after:top-0 after:w-[5px] after:h-10px after:rotate-[45deg] after:border after:border-t-0 after:opacity-0 after:border-l-0 after:border-white mr-15px inline-block leading-1"
+                      ></span>
+                      Luxary Home
+                    </label>
+                    <span       style="float: right;"class="leading-1.8">1,853 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="studio-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="studio-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark w-4 h-4 bg-white group-hover:bg-secondary-color  transition-all duration-300 relative z-0 after:absolute after:left-1 after:top-0 after:w-[5px] after:h-10px after:rotate-[45deg] after:border after:border-t-0 after:opacity-0 after:border-l-0 after:border-white mr-15px inline-block leading-1"
+                      ></span>
+                      Studio
+                    </label>
+                    <span   style="float: right;" class="leading-1.8">893 </span>
+                  </li>
+                </ul>
+              </div>
+              <!-- amenities filter -->
+              <div
+                class="pb-35px mb-35px  border-opacity-25"
+              >
+                <h5 class="mb-25px text-lg text-heading-color font-semibold">
+                  <span class="leading-1.3">Amenities</span>
+                </h5>
+                <ul class="flex flex-col gap-y-15px">
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="dishwasher-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="dishwasher-type"
+                        class="hidden"
+                        checked
+                      >
+                      <span
+                        class="checkmark w-4 h-4 bg-white group-hover:bg-secondary-color  transition-all duration-300 relative z-0 after:absolute after:left-1 after:top-0 after:w-[5px] after:h-10px after:rotate-[45deg] after:border after:border-t-0 after:opacity-0 after:border-l-0 after:border-white mr-15px inline-block leading-1"
+                      ></span>
+                      Dishwasher
+                    </label>
+                    <span       style="float: right;"class="leading-1.8">3,924 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="floor-coverings-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="floor-coverings-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark w-4 h-4 bg-white group-hover:bg-secondary-color transition-all duration-300 relative z-0 after:absolute after:left-1 after:top-0 after:w-[5px] after:h-10px after:rotate-[45deg] after:border after:border-t-0 after:opacity-0 after:border-l-0 after:border-white mr-15px inline-block leading-1"
+                      ></span>
+                      Floor Coverings
+                    </label>
+                    <span   style="float: right;" class="leading-1.8">3,610 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="internet-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="internet-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark w-4 h-4 bg-white group-hover:bg-secondary-color  transition-all duration-300 relative z-0 after:absolute after:left-1 after:top-0 after:w-[5px] after:h-10px after:rotate-[45deg] after:border after:border-t-0 after:opacity-0 after:border-l-0 after:border-white mr-15px inline-block leading-1"
+                      ></span>
+                      Internet
+                    </label>
+                    <span    style="float: right;"class="leading-1.8">2,912 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="build-wardrobes-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="build-wardrobes-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark w-4 h-4 bg-white group-hover:bg-secondary-color transition-all duration-300 relative z-0 after:absolute after:left-1 after:top-0 after:w-[5px] after:h-10px after:rotate-[45deg] after:border after:border-t-0 after:opacity-0 after:border-l-0 after:border-white mr-15px inline-block leading-1"
+                      ></span>
+                      Build Wardrobes
+                    </label>
+                    <span    style="float: right;"class="leading-1.8">2,687 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="supermarket-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="supermarket-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark  after:border-white mr-15px inline-block leading-1"
+                      ></span>
+                      Supermarket
+                    </label>
+                    <span   style="float: right;"class="leading-1.8">1,853 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="kids-zone-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="kids-zone-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark  inline-block leading-1"
+                      ></span>
+                      Kids Zone
+                    </label>
+                    <span style="float: right;"class="leading-1.8">893 </span>
+                  </li>
+                </ul>
+              </div>
+              <!-- price Renge filter -->
+              <div
+                class="pb-35px mb-35px  border-opacity-25"
+              >
+                <h5 class="mb-25px text-lg text-heading-color font-semibold">
+                  <span class="leading-1.3">Price Renge</span>
+                </h5>
+                <ul class="flex flex-col gap-y-15px">
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="low-budget-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="low-budget-type"
+                        class="hidden"
+                        checked
+                      >
+                      <span
+                        class="checkmark  leading-1"
+                      ></span>
+                      Low Budget
+                    </label>
+                    <span  style="float: right;" class="leading-1.8">$5,000 - $10,000 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="medium-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="medium-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark inline-block leading-1"
+                      ></span>
+                      Medium
+                    </label>
+                    <span    style="float: right;"class="leading-1.8">$10,000 - $30,000 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="high-budget-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="high-budget-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark w-4 h-4 bg-white    inline-block leading-1"
+                      ></span>
+                      High Budget
+                    </label>
+                    <span    style="float: right;"class="leading-1.8">$30,000 Up </span>
+                  </li>
+                </ul>
+              </div>
+              <!-- price Renge filter -->
+              <div
+                class="pb-35px mb-35px border-opacity-25"
+              >
+                <h5 class="mb-25px text-lg text-heading-color font-semibold">
+                  <span class="leading-1.3">Filter By Price</span>
+                </h5>
+                <!-- .range -->
+                <div>
+                  <div class="price_filter">
+                    <div class="price_slider_amount">
+                      <input type="submit" value="Your range:" >
+                      <input
+                        type="text"
+                        class="amount"
+                        name="price"
+                        placeholder="Add Your Price"
+                      >
+                    </div>
+                    <div class="slider-range"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Bed/bath filter -->
+              <div
+                class="pb-35px mb-35px  border-opacity-25"
+              >
+                <h5 class="mb-25px text-lg text-heading-color font-semibold">
+                  <span class="leading-1.3">Bed/bath</span>
+                </h5>
+                <ul class="flex flex-col gap-y-15px">
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="single-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="single-type"
+                        class="hidden"
+                        checked
+                      >
+                      <span
+                        class="checkmark w-4 h-4 bg-white group-hover:bg-secondary-color transition-all duration-300 relative z-0 after:absolute after:left-1 after:top-0 after:w-[5px] after:h-10px after:rotate-[45deg] after:border after:border-t-0 after:opacity-0 after:border-l-0 after:border-white mr-15px inline-block leading-1"
+                      ></span>
+                      Single
+                    </label>
+                    <span   style="float: right;"class="leading-1.8">3,924 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="double-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="double-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark w-4 h-4 bg-white group-hover:bg-secondary-color  transition-all duration-300 relative z-0 after:absolute after:left-1 after:top-0 after:w-[5px] after:h-10px after:rotate-[45deg] after:border after:border-t-0 after:opacity-0 after:border-l-0 after:border-white mr-15px inline-block leading-1"
+                      ></span>
+                      Double
+                    </label>
+                    <span    style="float: right;"class="leading-1.8">3,610 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="up-to-3-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="up-to-3-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark mr-15px inline-block leading-1"
+                      ></span>
+                      Up To 3
+                    </label>
+                    <span      style="float: right;"class="leading-1.8">2,912 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="up-to-5-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="up-to-5-type"
+                        class="hidden"
+                      >
+                      <span
+                        class="checkmark inline-block leading-1"
+                      ></span>
+                      Up To 3
+                    </label>
+                    <span      style="float: right;"class="leading-1.8">2,687 </span>
+                  </li>
+                </ul>
+              </div>
+              <!-- catagory filter -->
+              <div>
+                <h5 class="mb-25px text-lg text-heading-color font-semibold">
+                  <span class="leading-1.3">Catagory</span>
+                </h5>
+                <ul class="flex flex-col gap-y-15px">
+                  <li
+                    class="text-sm font-bold flex justify-between items-center">
+                    <label
+                      for="buying-type"
+                      class="checkbox-item leading-1.8 group flex items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="buying-type"
+                        class="hidden"
+                        checked
+                      >
+                      <span
+                        class="inline-block leading-1"
+                      ></span>
+                      Buying
+                    </label>
+                    <span    style="float: right;"class="leading-1.8">3,924 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center">
+                    <label
+                      for="renting-type"
+                      class=" items-center cursor-pointer"
+                      ><input
+                        type="checkbox"
+                        id="renting-type"
+                        class="hidden"
+                      >
+                      <span
+                        class=" after:border-white mr-15px inline-block leading-1"
+                      ></span>
+                      Renting
+                    </label>
+                    <span      style="float: right;" class="leading-1.8">3,610 </span>
+                  </li>
+                  <li
+                    class="text-sm font-bold flex justify-between items-center"
+                  >
+                    <label
+                      for="selling-type"
+                      class="flex items-center cursor-pointer">
+                      <input type="checkbox" id="selling-type"
+                        class="hidden">
+                      <span
+                        class="checkmark w-4 h-4 bg-white  inline-block leading-1"
+                      ></span>
+                      Selling
+                    </label>
+                    <span  style="float: right;" class="leading-1.8">2,912 </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <!--  -->
+    </div>
+
+    </div>
+        <!-- modals -->
+        <!-- modal apartment details-->
+        <!-- <div
+          class="modal hidden fixed top-0 left-0 w-full h-full z-xxl transition-all duration-500 bg-lightBlack opacity-0 overflow-y-auto"
+        >
+          <div
+            class="modal-close fixed md:absolute top-0 left-0 w-full h-full z-xsmall cursor-zoom-out"
+          ></div>
+          <div
+            class="modal-content transition-all duration-500 -translate-y-20 sm:max-w-500px "
+          >
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-x-30px p-30px bg-white relative"
+            >
+              <div>
+                <img
+                  src="./assets/img/product/4.png"
+                  class="w-full"
+                  alt=""
+                >
+              </div>
+
+     -->
+
+
+     <div class="footer mt-2" style="background-color: rgb(38, 63, 132); padding: 40px;">
+      <div class="container">
+          <div class="row">
+             
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                  <div class="footer1" >
+                    
+                       <p style="font-size: 30px; font-weight: 400; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">Weather</p> 
+                          <p style="color: white;">Lorem ipsum dolor sit amet,<br> 
+                            Possimus architecto illument  <br> 
+                            similique modi beatae vol .
+                       </p>
+                  </div>
+              </div>
+
+             
+              <div class="col-lg-3 col-md-3 col-sm-12"s>
+                  <div class="footer1">
+                       
+                       <p style="font-size: 30px;font-weight: 400; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">Quick links</p>
+                      <ul style="list-style: none; padding: 0; margin: 0;">
+                          <li style="margin-bottom: 5px;  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                              <a href="#"  style=" text-decoration: none; color:white" >Home</a>
+                          </li>
+                          <li style="margin-bottom: 5px;">
+                              <a href="#" style=" text-decoration: none; color: white;">Buy</a>
+                          </li>
+                          <li style="margin-bottom: 5px;">
+                              <a href="#" style="text-decoration: none; color: white;">Sell</a>
+                          </li>
+                          <li>
+                              <a href="#" style=" text-decoration: none; color: white;">Rent</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+
+              <!-- Support -->
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                  <div class="footer1">
+                     <p style="font-size: 30px; font-weight: 400; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">Support</p>
+                      <ul style="list-style: none; padding: 0; margin: 0; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                          <li style="margin-bottom: 5px;">
+                              <a href="#" style="display: inline-block; text-decoration: none; color: white;">About Us</a>
+                          </li>
+                          <li style="margin-bottom: 5px;">
+                              <a href="#" style="display: inline-block; text-decoration: none; color: white;">Contact Us</a>
+                          </li>
+                          <li style="margin-bottom: 5px;">
+                              <a href="#" style="display: inline-block; text-decoration: none; color: white;">Privacy Policy</a>
+                          </li>
+                          <li>
+                              <a href="#" style="display: inline-block; text-decoration: none; color: white;">Terms & Conditions</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+
+              <!-- Get in Touch -->
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                  <div class="footer1">
+                      <p style="font-size: 30px;font-weight: 400; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">Get in Touch</p>
+
+                      <p style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">
+                          4140 Parker Street<br>
+                          Allentown, New Microsoft 3114
+                      </p>
+                      <div>
+                          <a href="#" style="margin-right: 10px; color: white;"><i class="fa-brands fa-instagram"></i></a>
+                          <a href="#" style="margin-right: 10px; color: white;"><i class="fa-brands fa-facebook"></i></a>
+                          <a href="#" style="color:white;"><i class="fa-brands fa-whatsapp"></i></a>
+                      </div>
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+</section>
+</body>
+</html>

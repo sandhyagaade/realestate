@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+.reviews-grid {
+  --space: clamp(1rem, 1.43vw + 0.71rem, 2rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: var(--space);
+  list-style: none;
+}
+
+.review-card {
+  display: grid;
+  gap: var(--space);
+  align-items: center;
+  justify-items: center;
+  /* card styles is on bottom */
+}
+
+.rating-value[rating-value="1"] { --star-rev: 1}
+.rating-value[rating-value="2"] { --star-rev: 2}
+.rating-value[rating-value="3"] { --star-rev: 3}
+.rating-value[rating-value="4"] { --star-rev: 4}
+.rating-value[rating-value="5"] { --star-rev: 5}
+
+.rating-value {
+  /* More info for the below CSS you                  */
+  /* can find on Kevin Powell Tutorial                */
+  /* https://youtu.be/oiai47goI6A?si=b2NkafopvHX3VTlb */
+  
+  --_star-size: 1.4rem;
+  --_gap: var(--space);
+
+  --gap-max-size: min(var(--_gap), var(--_star-size) / 5);
+  --gap-calc: calc( (var(--star-rev, 0) - 1) * var(--gap-max-size) );
+
+  height: var(--_star-size);
+  width: calc(var(--star-rev, 0) * var(--_star-size) + var(--gap-calc));
+  background-image: 
+    url(https://api.iconify.design/material-symbols:star-rounded.svg?color=%23f0ad4e);
+  background-repeat: space no-repeat;
+  background-size: var(--_star-size);
+}
+
+
+.review-card {
+  background: #fff;
+  padding:  var(--space);
+  border-radius: 6px;
+ 
+}
+
+.reviewer-text {
+  font-size: 1.225rem;
+}
+
+.reviewer-name {
+  font-size: 1rem;
+  color: #989898;
+}
+       
+</style>
+
+</head>
+<body>
+    <ul class="wrapper reviews-grid">
+        <li class="review-card">
+          <span class="rating-value" rating-value="4"></span> <!--change the rating-value --> 
+       </li>
+    </ul> 
+</body>
+</html>

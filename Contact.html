@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+   /* @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Merriweather:wght@700&display=swap"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ 
+
+        .navigation{
+          justify-content: space-between;
+          margin-left: auto; 
+         
+          padding-right: 10px;
+           background-color: rgb(38, 63, 132);
+           padding-top: 8px ;
+            display: flex; gap: 30px;
+        }
+        
+
+
+
+
+  
+
+.form-container {
+
+  /* padding: 40px; */
+  border-radius: 25px;
+
+  max-width: 606px;
+  width: 100%;
+  /* margin: 40px auto; */
+
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: 80px auto;
+  }
+
+  span {
+    float: right;
+    height: 60px;
+    width: 60px;
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #6c6b8a;
+    font-size: 1.4rem;
+    transition: 0.3s ease;
+
+    
+  }
+
+  h2 {
+   
+    font-weight: 500;
+    text-align: center;
+    color: #151534;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    margin-top: 80px;
+  }
+
+  form {
+    padding: 15px 50px;
+
+    .form-group {
+      margin-bottom: 35px;
+
+      label {
+        display: block;
+        color: lighten(#151534, 60%);
+        font-size: 1.2rem;
+      }
+
+      input,
+      select {
+        max-width: 418px;
+        width: 100%;
+        padding: 10px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid lighten(#151534, 80%);
+        outline: none;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #151534;
+      }
+
+      textarea {
+        border: 2px solid #e6e6e6;
+        padding: 40px;
+        border-radius: 10px;
+        max-width: 476px;
+        width: 100%;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #151534;
+        outline: none;
+      }
+    }
+
+    .submit-button {
+      cursor: pointer;
+      background-color: #151534;
+      border: none;
+      color: #fff;
+      padding: 15px;
+      max-width: 475px;
+     
+      font-family: "Merriweather", serif;
+      font-weight: 200;
+      font-size: 15px;
+      border-radius: 52px;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: lighten(#151534, 10%);
+      }
+    }
+  }
+}
+.map{
+ padding-top: 70px;
+ padding-bottom: 30px;
+}
+.form-container{
+  padding-top: 0px;
+}
+
+    </style>
+  
+  <style>
+    .navigation ul li {
+          position: relative;
+        }
+      
+        .navigation ul li a:hover {
+        
+          color: #fff; 
+          border-radius: 5px; 
+        }
+      
+        .navigation ul li a::before {
+          content: "";
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          width: 0%;
+          height: 2px;
+
+          background-color: #fff;
+          transition: width 0.3s ease, left 0.3s ease;
+        }
+      
+        .navigation ul li a:hover::before {
+          width: 100%;
+          left: 0;
+        }
+      
+  </style>
+</head>
+<body>
+ 
+  
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color:rgb(38, 63, 132);;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="logo" style="margin-left: 20px;">
+      <img src="image/gradient-real-estate-logo-design_23-2151257071.avif" alt="image" height="50px" width="70px" >
+   </div>
+  
+   
+  
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+     
+        <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <ul class="navbar-nav"style="list-style: none; margin: 0; padding: 0; display: flex; gap: 20px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            
+          <li><a href="index.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">Home</a></li>
+          <li><a href="About Us.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">About Us</a></li>
+          <li><a href="Contact.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">Contact Us</a></li>
+          <li><a href="Property.html" style="text-decoration: none; color: #000; font-size: 16px;color: white;">Property</a></li>
+          <li><a href="#" style="text-decoration: none; color: #000; font-size: 16px;color: white;">News</a></li>
+       
+        </ul>
+    </div>
+  
+  
+  </nav>
+   
+  <div class="images1">
+    <img src="/image/contact-us.jpg" alt="Home Image" style="width: 100%; height: auto; display: block;">
+     <div class="image-text">
+
+
+       <section>
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                   
+                      <div class="map">
+                         <h3>Contact.</h3> <br>
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.699511674526!2d77.5832591!3d12.9270245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae159eeb3a5753%3A0xbe47e1b47ffa7c46!2s4th%20Block%2C%20Jayanagar%2C%20Bengaluru%2C%20Karnataka%20560041!5e0!3m2!1sen!2sin!4v1734760496172!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                  </div>
+
+
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-container">
+                        <!-- <span><i class="fa-solid fa-xmark"></i></span> -->
+                        <h2>Send Us a Message</h2>
+                        <form action="#" method="post">
+                          <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full_name">
+                          </div>
+                      
+                          <div class="form-group">
+                            <label for="email">Your email</label>
+                            <input type="text" id="full-name" name="full_name">
+                          </div>
+                      
+                          <!-- <div class="form-group">
+                            <select id="action" name="action" required>
+                              <option value="post">I want to Post</option>
+                              <option value="inquire">Inquire</option>
+                              <option value="feedback">Give Feedback</option>
+                              <option value="other">Other</option>
+                            </select>
+                          </div> -->
+                          <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your message goes here..." required></textarea>
+                          </div>
+                          <button type="submit" class="submit-button">Submit form</button>
+                        </form>
+                      </div>
+                </div>
+              </div>
+          </div>
+       </section>
+    
+
+
+       <div class="foot1" style="background-color: rgb(38, 63, 132);padding: 40px;">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="footer1">
+                      
+                         <p style="font-size: 30px; font-weight: 400; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">Weather</p> 
+                            <p style="color: white;">Lorem ipsum dolor sit amet,<br> 
+                              Possimus architecto illument  <br> 
+                              similique modi beatae vol .
+                         </p>
+                    </div>
+                </div>
+
+               
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="footer1">
+                         
+                         <p style="font-size: 30px;font-weight: 400; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">Quick links</p>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 5px;  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                <a href="#"  style=" text-decoration: none; color:white" >Home</a>
+                            </li>
+                            <li style="margin-bottom: 5px;">
+                                <a href="#" style=" text-decoration: none; color: white;">Buy</a>
+                            </li>
+                            <li style="margin-bottom: 5px;">
+                                <a href="#" style="text-decoration: none; color: white;">Sell</a>
+                            </li>
+                            <li>
+                                <a href="#" style=" text-decoration: none; color: white;">Rent</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Support -->
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="footer1">
+                       <p style="font-size: 30px; font-weight: 400; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">Support</p>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                            <li style="margin-bottom: 5px;">
+                                <a href="#" style="display: inline-block; text-decoration: none; color: white;">About Us</a>
+                            </li>
+                            <li style="margin-bottom: 5px;">
+                                <a href="#" style="display: inline-block; text-decoration: none; color: white;">Contact Us</a>
+                            </li>
+                            <li style="margin-bottom: 5px;">
+                                <a href="#" style="display: inline-block; text-decoration: none; color: white;">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" style="display: inline-block; text-decoration: none; color: white;">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Get in Touch -->
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="footer1">
+                        <p style="font-size: 30px;font-weight: 400; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">Get in Touch</p>
+
+                        <p style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;">
+                            4140 Parker Street<br>
+                            Allentown, New Microsoft 3114
+                        </p>
+                        <div>
+                            <a href="#" style="margin-right: 10px; color: white;"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" style="margin-right: 10px; color: white;"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" style="color:white;"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+       
+</body>
+</html>
